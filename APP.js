@@ -6,11 +6,13 @@ import { createAppContainer } from 'react-navigation';
 import ClientScreen from './ClientScreen';
 import WorkerScreen from './WorkerScreen';
 import AdminScreen from './AdminScreen';
+import FormScreen from './FormScreen'; // new screen
 
 const AppStack = createStackNavigator({
   Client: ClientScreen,
   Worker: WorkerScreen,
   Admin: AdminScreen,
+  Form: FormScreen, // new screen
 });
 
 const AppContainer = createAppContainer(AppStack);
