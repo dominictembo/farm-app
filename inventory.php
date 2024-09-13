@@ -7,17 +7,17 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-// Handle task retrieval
+// Handle inventory retrieval
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-  $query = "SELECT * FROM tasks";
+  $query = "SELECT * FROM inventory";
   $result = mysqli_query($conn, $query);
 
-  $tasks = array();
+  $inventory = array();
   while ($row = mysqli_fetch_assoc($result)) {
-    $tasks[] = $row;
+    $inventory[] = $row;
   }
 
-  echo json_encode($tasks);
+  echo json_encode($inventory);
 }
 
 // Close connection
